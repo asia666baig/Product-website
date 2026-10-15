@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover thoughtfully picked products, browse categories, and find something you love."
+    />
+    <meta name="theme-color" content="#f7f8f4" />
+    <title>ProductOfDay — Find your next favorite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="ProductOfDay home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="m12 2.8 2.3 6.4 6.4 2.3-6.4 2.3-2.3 6.4-2.3-6.4-6.4-2.3 6.4-2.3L12 2.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="brand-name">Product<span>Of</span>Day</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Discover</a>
+        <a class="nav-link" href="#catalog">Collection</a>
+      </nav>
+
+      <div class="header-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Catalog is live</span>
+      </div>
+    </header>
+
+    <main id="home" class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-star">✳</span> A LITTLE INSPIRATION, EVERY DAY</p>
+          <h1 id="hero-title">Meet your next<br />favorite thing<span>.</span></h1>
+          <p class="hero-description">
+            A hand-picked highlight from a collection of things worth discovering.
+          </p>
+          <a class="hero-button" href="#catalog">
+            Explore the collection
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <div class="hero-caption"><span class="caption-line"></span> TODAY'S PRODUCT OF THE DAY</div>
+        </div>
+
+        <article id="featured-product" class="featured-card" aria-live="polite">
+          <div class="featured-glow" aria-hidden="true"></div>
+          <span class="featured-badge"><span aria-hidden="true">✦</span> TODAY'S PICK</span>
+          <div id="featured-image-wrap" class="featured-image-wrap">
+            <span class="image-loading" aria-hidden="true"></span>
+            <img id="featured-image" class="featured-image" alt="" />
+          </div>
+          <div class="featured-details">
+            <span id="featured-category" class="featured-category">Finding your pick...</span>
+            <h2 id="featured-name">A good thing is on its way</h2>
+            <div class="featured-bottom">
+              <span id="featured-price" class="featured-price">—</span>
+              <span class="featured-day">A daily discovery</span>
+            </div>
+          </div>
+          <span class="featured-index" aria-hidden="true">01</span>
+        </article>
+        <span class="hero-decoration hero-decoration-one" aria-hidden="true"></span>
+        <span class="hero-decoration hero-decoration-two" aria-hidden="true"></span>
+      </section>
+
+      <section class="stats" aria-label="Collection overview">
+        <article class="stat-card">
+          <span class="stat-icon stat-icon-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.5V21" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /></svg>
+          </span>
+          <span class="stat-copy"><span class="stat-label">In the collection</span><strong id="totalProducts">—</strong></span>
+          <span class="stat-note">things to discover</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon stat-icon-peach" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h7v7H4zM14 5h6v4h-6zM14 12h6v7h-6zM4 15h7v4H4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /></svg>
+          </span>
+          <span class="stat-copy"><span class="stat-label">Curated categories</span><strong id="totalCategories">—</strong></span>
+          <span class="stat-note">ways to browse</span>
+        </article>
+        <article class="stat-card stat-card-price">
+          <span class="stat-icon stat-icon-lilac" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18m5-14.5c0-1.4-1.6-2.5-4-2.5S9 5.1 9 6.5 10.6 9 13 9s4 1.1 4 2.5-1.6 2.5-4 2.5-4-1.1-4-2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+          </span>
+          <span class="stat-copy"><span class="stat-label">Average price</span><strong id="averagePrice">—</strong></span>
+          <span class="stat-note">across the collection</span>
+        </article>
+      </section>
+
+      <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow catalog-eyebrow">THE GOOD STUFF</p>
+            <h2 id="catalog-title">Explore the collection<span>.</span></h2>
+            <p class="catalog-description">Find something that feels just right.</p>
+          </div>
+          <span class="catalog-count"><span id="resultCount">—</span> products</span>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7" />
+              <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search the collection..."
+              autocomplete="off"
+              aria-label="Search products by name"
+            />
+            <kbd>/</kbd>
+          </label>
+          <label class="select-wrap">
+            <span class="sr-only">Filter by category</span>
+            <select id="categoryFilter" aria-label="Filter by category">
+              <option value="all">All categories</option>
+            </select>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </label>
+          <label class="select-wrap sort-wrap">
+            <span class="sr-only">Sort products</span>
+            <select id="sortSelect" aria-label="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-ascending">Price: Low to high</option>
+              <option value="price-descending">Price: High to low</option>
+              <option value="rating">Top rated</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </label>
+          <button id="clearFilters" class="clear-button" type="button" hidden>Clear filters</button>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite">
+          <span class="loading-spinner" aria-hidden="true"></span> Finding lovely things...
+        </p>
+        <section id="productList" class="product-grid" aria-label="Product collection"></section>
+        <button id="retryButton" class="retry-button" type="button" hidden>Try again</button>
+        <button id="loadMoreButton" class="load-more-button" type="button" hidden>
+          Show more products
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4v12m-5-5 5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#home">Product<span>Of</span>Day</a>
+      <p>Good things are always worth discovering.</p>
+      <span>Powered by Fake Store API</span>
+    </footer>
+  </body>
+</html>
